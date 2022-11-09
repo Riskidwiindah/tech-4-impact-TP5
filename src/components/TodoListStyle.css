@@ -1,0 +1,22 @@
+.box-todolist{
+    width: 50%;
+    border: 2px solid black;
+    justify-content: center;
+}
+
+#squad-button button{
+    background-color: rgb(107, 105, 105);
+    font-weight: bold;
+    color: white;
+}
+
+#squad-button button:hover{
+    background-color: darkseagreen;
+}
+
+.box-todolist .box-list{
+    border: 2px solid rgb(5, 204, 249);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
