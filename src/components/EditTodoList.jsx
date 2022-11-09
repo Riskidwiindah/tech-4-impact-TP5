@@ -12,7 +12,7 @@ function EditTodoList (){
 
     const handleSaveEdit = (e) =>{
         e.preventDefault()
-        dispatch(updateTodo({id, todo, selectStatus}))
+        dispatch(updateTodo(id, todo, selectStatus))
         console.log(id, todo, selectStatus);
     }
 
