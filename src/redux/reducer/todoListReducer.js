@@ -1,4 +1,4 @@
-import {ADD_TODO, DELETE_TODO, FETCH_START, SUCCESS_GET_TODO, UPDATE_TODO } from "../action/todoListAction"
+import {ACTIVE_TODO, ADD_TODO, COMPLETED_TODO, DELETE_TODO, FETCH_START, SUCCESS_GET_TODO, UPDATE_TODO } from "../action/todoListAction"
 
 const initialState = {
     todos: [],
@@ -34,6 +34,18 @@ const todoListReducer = (state = initialState, action) =>{
             }
         case UPDATE_TODO:
             return {
+                todos: action.payload,
+                isLoading: false
+            }
+        case ACTIVE_TODO:
+            return {
+                ...state,
+                todos: action.payload,
+                isLoading: false
+            }
+        case COMPLETED_TODO:
+            return {
+                ...state,
                 todos: action.payload,
                 isLoading: false
             }

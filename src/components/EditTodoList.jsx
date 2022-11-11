@@ -13,10 +13,10 @@ function EditTodoList (){
     const handleSaveEdit = (e) =>{
         e.preventDefault()
         dispatch(updateTodo(id, todo, selectStatus))
-        console.log(id, todo, selectStatus);
+        alert("Data berhasil diperbaharui")
     }
 
-    const handleCancelEdit = (e) =>{
+    const handleCancelEdit = () =>{
         navigation(`/`)
     }
 
@@ -25,7 +25,7 @@ function EditTodoList (){
             <div className="container-fluid">
             <div className="card">
                 <div className="card-header">
-                    <h5 className="card-title">Edit Todo List</h5>
+                    <h5 className="card-title"><i className="fas fa-arrow-left" onClick={handleCancelEdit}></i> Edit Todo List</h5>
                 </div>
                 <div className="card-body">
                     <form className="mt-4">
