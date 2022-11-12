@@ -14,6 +14,7 @@ function EditTodoList (){
         e.preventDefault()
         dispatch(updateTodo(id, todo, selectStatus))
         alert("Data berhasil diperbaharui")
+        navigation(`/`)
     }
 
     const handleCancelEdit = () =>{

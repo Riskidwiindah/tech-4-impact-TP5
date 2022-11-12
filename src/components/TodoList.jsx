@@ -12,6 +12,8 @@ function TodoList() {
 
     const dispatch = useDispatch()
     const {todos, isLoading} = useSelector((state) => state.todo )
+    console.log(todos);
+    console.log(isLoading);
 
     //Fungsi untuk tambah data
     const handleSubmit = (e) => {
@@ -84,6 +86,7 @@ function TodoList() {
                                 <button type='submit' className='btn btn-danger' onClick={() => delete_Todo(item.id)}><i className="fad fa-trash"></i> Delete</button>
                             </div>
                         )
+                        // <h1>S</h1>
                     )}
                 
                 {/* <h5><i class="far fa-square"></i> Buy Egg</h5> */}

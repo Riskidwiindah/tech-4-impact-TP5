@@ -1,5 +1,5 @@
 import axios from "axios"
-
+import {useNavigate} from "react-router-dom"
 export const GET_TODO = "GET_TODO"
 export const DELETE_TODO = "DELETE_TODO"
 export const ADD_TODO = "ADD_TODO"
@@ -8,6 +8,7 @@ export const FETCH_START = "FETCH_START"
 export const ACTIVE_TODO = "ACTIVE_TODO"
 export const COMPLETED_TODO = "COMPLETED_TODO"
 export const SUCCESS_GET_TODO = "SUCCESS_GET_TODO"
+
 
 function fetchStart(){
     return {
@@ -93,8 +94,9 @@ export const updateTodo = (id, todo, selectStatus) => {
 
         const result = await axios.put(`https://634b803dd90b984a1e3ac3f4.mockapi.io/api/fe9/TodoList/${id}`,
         {name_todo: todo, statusTodo: selectStatus})
-        dispatch(updateTodoList(result.data))
+        // dispatch(updateTodoList(result.data))
         // console.log(result);
+        dispatch(fetchStart)
     }
 }
 
@@ -110,7 +112,8 @@ export const searchActiveTodo = (statusTodoList) => {
         const hasil = resultFix.filter((item) => 
             item.statusTodo.includes(statusTodoList)
         )
-        dispatch(activeTodo(hasil))  
+        // dispatch(activeTodo(hasil))  
+        dispatch(succesGetTodo(hasil))
     }
 }
 

@@ -1,7 +1,12 @@
 import {ACTIVE_TODO, ADD_TODO, COMPLETED_TODO, DELETE_TODO, FETCH_START, SUCCESS_GET_TODO, UPDATE_TODO } from "../action/todoListAction"
 
 const initialState = {
-    todos: [],
+    todos: [{
+        id: "8",
+        isDone: false,
+        name_todo: "ketemuan sama pacar",
+        statusTodo: "active"
+    }],
     // statusList: [],
     isLoading : false,
     // deleteProduct: null,
